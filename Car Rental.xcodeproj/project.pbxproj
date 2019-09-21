@@ -20,8 +20,8 @@
 		AD213C2123315AA200626D30 /* VehiclesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C1F23315AA200626D30 /* VehiclesList.storyboard */; };
 		AD213C2623315AA400626D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2523315AA400626D30 /* Assets.xcassets */; };
 		AD213C2923315AA400626D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2723315AA400626D30 /* LaunchScreen.storyboard */; };
-		AD213C3423315AA400626D30 /* Car_RentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3323315AA400626D30 /* Car_RentalTests.swift */; };
-		AD213C3F23315AA400626D30 /* Car_RentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3E23315AA400626D30 /* Car_RentalUITests.swift */; };
+		AD213C3423315AA400626D30 /* CarRentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3323315AA400626D30 /* CarRentalTests.swift */; };
+		AD213C3F23315AA400626D30 /* CarRentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3E23315AA400626D30 /* CarRentalUITests.swift */; };
 		ADA9126023358DDC00AE0097 /* VehicleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9125F23358DDC00AE0097 /* VehicleDetailsViewModel.swift */; };
 		ADA9126723359C7E00AE0097 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA9126623359C7E00AE0097 /* Localizable.strings */; };
 		ADA9126A23359D7100AE0097 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9126923359D7100AE0097 /* String+Localizable.swift */; };
@@ -30,6 +30,9 @@
 		ADA912752335A18B00AE0097 /* VehicleListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA912742335A18B00AE0097 /* VehicleListCellViewModel.swift */; };
 		ADA912782335AF0B00AE0097 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA912772335AF0B00AE0097 /* UIView+Loading.swift */; };
 		ADA9127A2335B23000AE0097 /* UIView+AlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA912792335B23000AE0097 /* UIView+AlertLabel.swift */; };
+		ADA9127F2335D95000AE0097 /* VehicleDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9127D2335D92300AE0097 /* VehicleDetailsViewModelTest.swift */; };
+		ADA912802335D95600AE0097 /* VehicleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9127B2335D90C00AE0097 /* VehicleFactory.swift */; };
+		ADA912842335D9F500AE0097 /* VehicleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA912812335D9AF00AE0097 /* VehicleListViewModelTests.swift */; };
 		ADD9A4892334280700A78153 /* VehiclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9A4882334280700A78153 /* VehiclesService.swift */; };
 		ADD9A48C2334285800A78153 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9A48B2334285800A78153 /* Vehicle.swift */; };
 		ADD9A48F233429A600A78153 /* SixtVehiclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9A48E233429A600A78153 /* SixtVehiclesService.swift */; };
@@ -72,10 +75,10 @@
 		AD213C2523315AA400626D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD213C2A23315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD213C2F23315AA400626D30 /* Car RentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD213C3323315AA400626D30 /* Car_RentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car_RentalTests.swift; sourceTree = "<group>"; };
+		AD213C3323315AA400626D30 /* CarRentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalTests.swift; sourceTree = "<group>"; };
 		AD213C3523315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD213C3A23315AA400626D30 /* Car RentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD213C3E23315AA400626D30 /* Car_RentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car_RentalUITests.swift; sourceTree = "<group>"; };
+		AD213C3E23315AA400626D30 /* CarRentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalUITests.swift; sourceTree = "<group>"; };
 		AD213C4023315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA9125F23358DDC00AE0097 /* VehicleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsViewModel.swift; sourceTree = "<group>"; };
 		ADA9126323359C5900AE0097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VehiclesList.storyboard; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		ADA912742335A18B00AE0097 /* VehicleListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCellViewModel.swift; sourceTree = "<group>"; };
 		ADA912772335AF0B00AE0097 /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		ADA912792335B23000AE0097 /* UIView+AlertLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AlertLabel.swift"; sourceTree = "<group>"; };
+		ADA9127B2335D90C00AE0097 /* VehicleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFactory.swift; sourceTree = "<group>"; };
+		ADA9127D2335D92300AE0097 /* VehicleDetailsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsViewModelTest.swift; sourceTree = "<group>"; };
+		ADA912812335D9AF00AE0097 /* VehicleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModelTests.swift; sourceTree = "<group>"; };
 		ADD9A4882334280700A78153 /* VehiclesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesService.swift; sourceTree = "<group>"; };
 		ADD9A48B2334285800A78153 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		ADD9A48E233429A600A78153 /* SixtVehiclesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtVehiclesService.swift; sourceTree = "<group>"; };
@@ -157,9 +163,9 @@
 		AD213C0F23315AA200626D30 = {
 			isa = PBXGroup;
 			children = (
-				AD213C1A23315AA200626D30 /* Car Rental */,
-				AD213C3223315AA400626D30 /* Car RentalTests */,
-				AD213C3D23315AA400626D30 /* Car RentalUITests */,
+				AD213C1A23315AA200626D30 /* CarRental */,
+				AD213C3223315AA400626D30 /* CarRentalTests */,
+				AD213C3D23315AA400626D30 /* CarRentalUITests */,
 				AD213C1923315AA200626D30 /* Products */,
 				05D434096FACCD89042249A9 /* Pods */,
 				F4778263EF9BAF0304733510 /* Frameworks */,
@@ -176,7 +182,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AD213C1A23315AA200626D30 /* Car Rental */ = {
+		AD213C1A23315AA200626D30 /* CarRental */ = {
 			isa = PBXGroup;
 			children = (
 				ADEDBDB523341EB700930016 /* Application */,
@@ -187,25 +193,28 @@
 				AD213C2723315AA400626D30 /* LaunchScreen.storyboard */,
 				AD213C2A23315AA400626D30 /* Info.plist */,
 			);
-			path = "Car Rental";
+			path = CarRental;
 			sourceTree = "<group>";
 		};
-		AD213C3223315AA400626D30 /* Car RentalTests */ = {
+		AD213C3223315AA400626D30 /* CarRentalTests */ = {
 			isa = PBXGroup;
 			children = (
-				AD213C3323315AA400626D30 /* Car_RentalTests.swift */,
+				ADA9127B2335D90C00AE0097 /* VehicleFactory.swift */,
+				AD213C3323315AA400626D30 /* CarRentalTests.swift */,
+				ADA9127D2335D92300AE0097 /* VehicleDetailsViewModelTest.swift */,
+				ADA912812335D9AF00AE0097 /* VehicleListViewModelTests.swift */,
 				AD213C3523315AA400626D30 /* Info.plist */,
 			);
-			path = "Car RentalTests";
+			path = CarRentalTests;
 			sourceTree = "<group>";
 		};
-		AD213C3D23315AA400626D30 /* Car RentalUITests */ = {
+		AD213C3D23315AA400626D30 /* CarRentalUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AD213C3E23315AA400626D30 /* Car_RentalUITests.swift */,
+				AD213C3E23315AA400626D30 /* CarRentalUITests.swift */,
 				AD213C4023315AA400626D30 /* Info.plist */,
 			);
-			path = "Car RentalUITests";
+			path = CarRentalUITests;
 			sourceTree = "<group>";
 		};
 		ADA9125E23358DC400AE0097 /* ViewModel */ = {
@@ -280,7 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				ADD9A487233427A900A78153 /* VehiclesService */,
-				ADD9A48D2334298C00A78153 /* SixtAPI */,
+				ADD9A48D2334298C00A78153 /* SixtVehicleService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -301,12 +310,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ADD9A48D2334298C00A78153 /* SixtAPI */ = {
+		ADD9A48D2334298C00A78153 /* SixtVehicleService */ = {
 			isa = PBXGroup;
 			children = (
 				ADD9A48E233429A600A78153 /* SixtVehiclesService.swift */,
 			);
-			path = SixtAPI;
+			path = SixtVehicleService;
 			sourceTree = "<group>";
 		};
 		ADD9A4902334361D00A78153 /* Helpers */ = {
@@ -623,7 +632,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD213C3423315AA400626D30 /* Car_RentalTests.swift in Sources */,
+				ADA9127F2335D95000AE0097 /* VehicleDetailsViewModelTest.swift in Sources */,
+				ADA912842335D9F500AE0097 /* VehicleListViewModelTests.swift in Sources */,
+				AD213C3423315AA400626D30 /* CarRentalTests.swift in Sources */,
+				ADA912802335D95600AE0097 /* VehicleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD213C3F23315AA400626D30 /* Car_RentalUITests.swift in Sources */,
+				AD213C3F23315AA400626D30 /* CarRentalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J9A6836S2;
-				INFOPLIST_FILE = "Car Rental/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CarRental/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -812,7 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J9A6836S2;
-				INFOPLIST_FILE = "Car Rental/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CarRental/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -831,7 +843,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Car RentalTests/Info.plist";
+				INFOPLIST_FILE = CarRentalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -852,7 +864,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Car RentalTests/Info.plist";
+				INFOPLIST_FILE = CarRentalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -872,7 +884,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Car RentalUITests/Info.plist";
+				INFOPLIST_FILE = CarRentalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -892,7 +904,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Car RentalUITests/Info.plist";
+				INFOPLIST_FILE = CarRentalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

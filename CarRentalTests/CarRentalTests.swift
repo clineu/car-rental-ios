@@ -9,7 +9,7 @@
 import XCTest
 @testable import Car_Rental
 
-class Car_RentalTests: XCTestCase {
+class CarRentalTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,3 +32,4 @@ class Car_RentalTests: XCTestCase {
     }
 
 }
+
