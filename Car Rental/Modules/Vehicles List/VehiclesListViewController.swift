@@ -189,11 +189,27 @@ extension VehiclesListViewController: UITableViewDataSource, UITableViewDelegate
 extension VehiclesListViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard
-            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: markerAnnotationIdentifier, for: annotation) as? MKMarkerAnnotationView,
-            let annotation = annotation as? CarAnnotation else {
-                return nil
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: markerAnnotationIdentifier,
+                                                                       for: annotation) as? MKMarkerAnnotationView else {
+                                                                        return nil
         }
-        return configure(annotationView: annotationView, forVehicleAnnotation: annotation)
+        
+        if let annotation = annotation as? CarAnnotation {
+            return configure(annotationView: annotationView, forVehicleAnnotation: annotation)
+        }
+        
+        if let annotation = annotation as? MKClusterAnnotation {
+            return configure(annotationView: annotationView, forClusterAnnotation: annotation)
+        }
+        
+        return nil
+    }
+    
+    func configure(annotationView: MKMarkerAnnotationView, forClusterAnnotation annotation: MKClusterAnnotation) -> MKAnnotationView {
+        annotationView.annotation = annotation
+        annotationView.markerTintColor = .black
+        annotationView.canShowCallout = false
+        return annotationView
     }
     
     func configure(annotationView: MKMarkerAnnotationView, forVehicleAnnotation annotation: CarAnnotation) -> MKAnnotationView {
@@ -234,6 +250,9 @@ extension VehiclesListViewController: MKMapViewDelegate {
 
 extension VehiclesListViewController: VehicleDetailsDelegate {
     func vehicleDetailsdidPressCloseButton(_ vehicleDetails: VehicleDetailsViewController) {
+        for annotation in mapView.selectedAnnotations {
+            mapView.deselectAnnotation(annotation, animated: true)
+        }
         dismissVehicleDetails()
     }
 }
