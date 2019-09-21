@@ -15,8 +15,8 @@ class VehicleListCellViewModel {
         self.vehicle = vehicle
     }
     
-    func createListCellModel() -> VehicleListModel {
-        return VehicleListModel(title: vehicle.name,
+    func createListCellModel() -> VehicleListCellModel {
+        return VehicleListCellModel(title: vehicle.name,
                                 licensePlace: vehicle.licensePlate,
                                 model: vehicle.modelName,
                                 imageURL: URL(string: vehicle.carImageUrl),
@@ -24,7 +24,7 @@ class VehicleListCellViewModel {
     }
 }
 
-struct VehicleListModel {
+struct VehicleListCellModel {
     let title: String
     let licensePlace: String
     let model: String

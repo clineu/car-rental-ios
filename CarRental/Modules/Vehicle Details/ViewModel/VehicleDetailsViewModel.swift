@@ -60,27 +60,3 @@ struct VehicleDetailsPresenter {
     let transmission: String
     let innerCleanliness: String
 }
-
-extension Cleanliness: LocalizableEnum {
-    var localizable: String {
-        switch self {
-        case .clean:
-            return "vehicle_details.model.clean.clean".localizable
-        case .veryClean:
-            return "vehicle_details.model.clean.very_clean".localizable
-        case .regular:
-            return "vehicle_details.model.clean.regular".localizable
-        }
-    }
-}
-
-extension Transmission: LocalizableEnum {
-    var localizable: String {
-        switch self {
-        case .automatic:
-            return "vehicle_details.model.transmission.automatic".localizable
-        case .manual:
-            return "vehicle_details.model.transmission.manual".localizable
-        }
-    }
-}

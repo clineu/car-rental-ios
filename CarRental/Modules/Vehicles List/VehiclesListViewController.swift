@@ -14,7 +14,8 @@ class VehiclesListViewController: UIViewController {
     private let markerAnnotationIdentifier = "VehicleAnnotation"
     private let vehicleCellIdentifier = "VehicleListTableViewCell"
     private let mapClusterIdentifier = "DefaultCluster"
-    private let detailsAnimation = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.7)
+    private let vehicleFilterSegueIdentifier = "VehicleFilterSegue"
+    
     private var currentDetailsVC: VehicleDetailsViewController?
     private let refreshControl = UIRefreshControl()
     
@@ -24,9 +25,9 @@ class VehiclesListViewController: UIViewController {
     
     lazy var viewModel: VehicleListViewModelProtocol = {
         let service = SixtVehiclesService()
-        let vm = VehiclesListViewModel(service: service)
-        vm.delegate = self
-        return vm
+        let viewModel = VehiclesListViewModel(service: service)
+        viewModel.delegate = self
+        return viewModel
     }()
     
     override func viewDidLoad() {
@@ -88,6 +89,10 @@ extension VehiclesListViewController: VehicleListViewModelDelegate {
         switch result {
         case .success(let vehicles):
             DispatchQueue.main.async {
+                if vehicles.isEmpty {
+                    self.tableView
+                        .addCenterLabelView(text: "vehicle_list.result.empty_list".localizable)
+                }
                 self.tableView.reloadData()
             }
             self.addVehicleAnnotation(vehicles: vehicles)
@@ -114,44 +119,26 @@ extension VehiclesListViewController: VehicleListViewModelDelegate {
 
     func presentVehicleDetails(vehicle: Vehicle) {
         let viewModel = VehicleDetailsViewModel(vehicle: vehicle)
+        
         let vehicleDetailsVC = VehicleDetailsViewController(viewModel: viewModel)
         vehicleDetailsVC.delegate = self
-        
         self.currentDetailsVC = vehicleDetailsVC
-        self.addChild(vehicleDetailsVC)
         
-        let vehicleDetailsView = vehicleDetailsVC.view
-        
-        let finalPosition: CGPoint = {
-            let minY = view.frame.size.height - 320
-            let yPosition = min(view.frame.size.height/2, minY)
-            let finalPosition = CGPoint(x: 0, y: yPosition)
-            return finalPosition
-        }()
-        
-        let initialPosition = CGPoint(x: 0, y: view.frame.size.height)
-        vehicleDetailsView?.frame = CGRect(origin: initialPosition, size: view.frame.size)
-        vehicleDetailsView?.alpha = 0.7
-        view.addSubview(vehicleDetailsVC.view)
-        
-        detailsAnimation.addAnimations {
-            vehicleDetailsView?.frame = CGRect(origin: finalPosition, size: self.view.frame.size)
-            vehicleDetailsView?.alpha = 1.0
-        }
-        detailsAnimation.startAnimation()
+        vehicleDetailsVC.presentIn(viewController: self)
     }
     
     func dismissVehicleDetails() {
-        let finalFrame = CGPoint(x: 0, y: view.frame.size.height)
-        let view = currentDetailsVC?.view
-        detailsAnimation.addAnimations {
-            view?.frame.origin = finalFrame
-            view?.alpha = 0.7
+        currentDetailsVC?.dismissDetailsFrom(viewController: self)
+        currentDetailsVC = nil
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == vehicleFilterSegueIdentifier {
+            let destinationNav = segue.destination as? UINavigationController
+            let filterVC = destinationNav?.viewControllers.first as? VehiclesFilterViewController
+            filterVC?.delegate = viewModel
+            filterVC?.viewModel = VehicleFilterViewModel(filter: viewModel.filter)
         }
-        detailsAnimation.addCompletion { (_) in
-            view?.removeFromSuperview()
-        }
-        detailsAnimation.startAnimation()
     }
     
 }
@@ -250,10 +237,10 @@ extension VehiclesListViewController: MKMapViewDelegate {
 
 extension VehiclesListViewController: VehicleDetailsDelegate {
     func vehicleDetailsdidPressCloseButton(_ vehicleDetails: VehicleDetailsViewController) {
+        dismissVehicleDetails()
         for annotation in mapView.selectedAnnotations {
             mapView.deselectAnnotation(annotation, animated: true)
         }
-        dismissVehicleDetails()
     }
 }
 

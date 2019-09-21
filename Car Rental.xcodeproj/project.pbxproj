@@ -20,8 +20,16 @@
 		AD213C2123315AA200626D30 /* VehiclesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C1F23315AA200626D30 /* VehiclesList.storyboard */; };
 		AD213C2623315AA400626D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2523315AA400626D30 /* Assets.xcassets */; };
 		AD213C2923315AA400626D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2723315AA400626D30 /* LaunchScreen.storyboard */; };
-		AD213C3423315AA400626D30 /* CarRentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3323315AA400626D30 /* CarRentalTests.swift */; };
 		AD213C3F23315AA400626D30 /* CarRentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3E23315AA400626D30 /* CarRentalUITests.swift */; };
+		AD50A8AE233689760028C234 /* VehicleFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD50A8AD233689760028C234 /* VehicleFilter.storyboard */; };
+		AD50A8B023368A7C0028C234 /* VehiclesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8AF23368A7C0028C234 /* VehiclesFilterViewController.swift */; };
+		AD50A8B22336A4470028C234 /* FuelType+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8B12336A4470028C234 /* FuelType+Localizable.swift */; };
+		AD50A8B42336A4580028C234 /* Transmission+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8B32336A4580028C234 /* Transmission+Localizable.swift */; };
+		AD50A8B62336A4780028C234 /* Cleanliness+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8B52336A4780028C234 /* Cleanliness+Localizable.swift */; };
+		AD50A8B92336A5540028C234 /* UIStackView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8B82336A5540028C234 /* UIStackView+Helpers.swift */; };
+		AD50A8BB2336AED80028C234 /* VehicleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8BA2336AED80028C234 /* VehicleFilter.swift */; };
+		AD50A8BE2336B1780028C234 /* VehicleFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8BD2336B1780028C234 /* VehicleFilterViewModel.swift */; };
+		AD50A8C02336B3B50028C234 /* VehicleFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8BF2336B3B50028C234 /* VehicleFilterTests.swift */; };
 		ADA9126023358DDC00AE0097 /* VehicleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9125F23358DDC00AE0097 /* VehicleDetailsViewModel.swift */; };
 		ADA9126723359C7E00AE0097 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA9126623359C7E00AE0097 /* Localizable.strings */; };
 		ADA9126A23359D7100AE0097 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9126923359D7100AE0097 /* String+Localizable.swift */; };
@@ -75,11 +83,19 @@
 		AD213C2523315AA400626D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD213C2A23315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD213C2F23315AA400626D30 /* Car RentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD213C3323315AA400626D30 /* CarRentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalTests.swift; sourceTree = "<group>"; };
 		AD213C3523315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD213C3A23315AA400626D30 /* Car RentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD213C3E23315AA400626D30 /* CarRentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalUITests.swift; sourceTree = "<group>"; };
 		AD213C4023315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD50A8AD233689760028C234 /* VehicleFilter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehicleFilter.storyboard; sourceTree = "<group>"; };
+		AD50A8AF23368A7C0028C234 /* VehiclesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesFilterViewController.swift; sourceTree = "<group>"; };
+		AD50A8B12336A4470028C234 /* FuelType+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FuelType+Localizable.swift"; sourceTree = "<group>"; };
+		AD50A8B32336A4580028C234 /* Transmission+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transmission+Localizable.swift"; sourceTree = "<group>"; };
+		AD50A8B52336A4780028C234 /* Cleanliness+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cleanliness+Localizable.swift"; sourceTree = "<group>"; };
+		AD50A8B82336A5540028C234 /* UIStackView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Helpers.swift"; sourceTree = "<group>"; };
+		AD50A8BA2336AED80028C234 /* VehicleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFilter.swift; sourceTree = "<group>"; };
+		AD50A8BD2336B1780028C234 /* VehicleFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFilterViewModel.swift; sourceTree = "<group>"; };
+		AD50A8BF2336B3B50028C234 /* VehicleFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFilterTests.swift; sourceTree = "<group>"; };
 		ADA9125F23358DDC00AE0097 /* VehicleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsViewModel.swift; sourceTree = "<group>"; };
 		ADA9126323359C5900AE0097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VehiclesList.storyboard; sourceTree = "<group>"; };
 		ADA9126423359C5900AE0097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -200,9 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				ADA9127B2335D90C00AE0097 /* VehicleFactory.swift */,
-				AD213C3323315AA400626D30 /* CarRentalTests.swift */,
 				ADA9127D2335D92300AE0097 /* VehicleDetailsViewModelTest.swift */,
 				ADA912812335D9AF00AE0097 /* VehicleListViewModelTests.swift */,
+				AD50A8BF2336B3B50028C234 /* VehicleFilterTests.swift */,
 				AD213C3523315AA400626D30 /* Info.plist */,
 			);
 			path = CarRentalTests;
@@ -215,6 +231,32 @@
 				AD213C4023315AA400626D30 /* Info.plist */,
 			);
 			path = CarRentalUITests;
+			sourceTree = "<group>";
+		};
+		AD50A8AC233689510028C234 /* Vehicle Filter */ = {
+			isa = PBXGroup;
+			children = (
+				AD50A8BC2336B1690028C234 /* View Model */,
+				AD50A8AD233689760028C234 /* VehicleFilter.storyboard */,
+				AD50A8AF23368A7C0028C234 /* VehiclesFilterViewController.swift */,
+			);
+			path = "Vehicle Filter";
+			sourceTree = "<group>";
+		};
+		AD50A8B72336A53F0028C234 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				AD50A8B82336A5540028C234 /* UIStackView+Helpers.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		AD50A8BC2336B1690028C234 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD50A8BD2336B1780028C234 /* VehicleFilterViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		ADA9125E23358DC400AE0097 /* ViewModel */ = {
@@ -306,6 +348,10 @@
 			isa = PBXGroup;
 			children = (
 				ADD9A48B2334285800A78153 /* Vehicle.swift */,
+				AD50A8B12336A4470028C234 /* FuelType+Localizable.swift */,
+				AD50A8B32336A4580028C234 /* Transmission+Localizable.swift */,
+				AD50A8B52336A4780028C234 /* Cleanliness+Localizable.swift */,
+				AD50A8BA2336AED80028C234 /* VehicleFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +367,7 @@
 		ADD9A4902334361D00A78153 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AD50A8B72336A53F0028C234 /* UIStackView */,
 				ADA912762335AEFC00AE0097 /* UIView */,
 				ADA9126E23359EE900AE0097 /* UIImage */,
 				ADA9126823359D4D00AE0097 /* String */,
@@ -358,6 +405,7 @@
 		ADEDBDB823341EF100930016 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD50A8AC233689510028C234 /* Vehicle Filter */,
 				AD1BA0AA233474F400948354 /* Vehicle Details */,
 				ADEDBDB923341F1800930016 /* Vehicles List */,
 			);
@@ -493,6 +541,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD50A8AE233689760028C234 /* VehicleFilter.storyboard in Resources */,
 				AD1BA0B62334814100948354 /* VehicleListTableViewCell.xib in Resources */,
 				ADA9126723359C7E00AE0097 /* Localizable.strings in Resources */,
 				AD1BA0B2233476AE00948354 /* VehicleDetailsViewController.xib in Resources */,
@@ -609,13 +658,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD50A8B92336A5540028C234 /* UIStackView+Helpers.swift in Sources */,
 				ADA9126023358DDC00AE0097 /* VehicleDetailsViewModel.swift in Sources */,
+				AD50A8B42336A4580028C234 /* Transmission+Localizable.swift in Sources */,
+				AD50A8B023368A7C0028C234 /* VehiclesFilterViewController.swift in Sources */,
 				ADD9A4892334280700A78153 /* VehiclesService.swift in Sources */,
 				ADA9127023359EFB00AE0097 /* UIImage+Repository.swift in Sources */,
+				AD50A8B22336A4470028C234 /* FuelType+Localizable.swift in Sources */,
 				AD1BA0AE2334757300948354 /* VehiclesListViewModel.swift in Sources */,
 				AD1BA0B52334814100948354 /* VehicleListTableViewCell.swift in Sources */,
 				ADA9126A23359D7100AE0097 /* String+Localizable.swift in Sources */,
 				AD213C1E23315AA200626D30 /* VehiclesListViewController.swift in Sources */,
+				AD50A8B62336A4780028C234 /* Cleanliness+Localizable.swift in Sources */,
 				ADD9A4932334363A00A78153 /* URLSession+Decodable.swift in Sources */,
 				ADA9126D23359EB600AE0097 /* LocalizableEnum.swift in Sources */,
 				AD1BA0B1233476AE00948354 /* VehicleDetailsViewController.swift in Sources */,
@@ -624,7 +678,9 @@
 				ADA912752335A18B00AE0097 /* VehicleListCellViewModel.swift in Sources */,
 				ADD9A48F233429A600A78153 /* SixtVehiclesService.swift in Sources */,
 				ADA9127A2335B23000AE0097 /* UIView+AlertLabel.swift in Sources */,
+				AD50A8BB2336AED80028C234 /* VehicleFilter.swift in Sources */,
 				AD213C1C23315AA200626D30 /* AppDelegate.swift in Sources */,
+				AD50A8BE2336B1780028C234 /* VehicleFilterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,9 +688,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD50A8C02336B3B50028C234 /* VehicleFilterTests.swift in Sources */,
 				ADA9127F2335D95000AE0097 /* VehicleDetailsViewModelTest.swift in Sources */,
 				ADA912842335D9F500AE0097 /* VehicleListViewModelTests.swift in Sources */,
-				AD213C3423315AA400626D30 /* CarRentalTests.swift in Sources */,
 				ADA912802335D95600AE0097 /* VehicleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,6 +899,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9A6836S2;
 				INFOPLIST_FILE = CarRentalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -864,6 +921,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9A6836S2;
 				INFOPLIST_FILE = CarRentalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -884,6 +942,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9A6836S2;
 				INFOPLIST_FILE = CarRentalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -904,6 +963,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9A6836S2;
 				INFOPLIST_FILE = CarRentalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

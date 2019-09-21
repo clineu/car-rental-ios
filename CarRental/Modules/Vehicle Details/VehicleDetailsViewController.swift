@@ -15,6 +15,7 @@ protocol VehicleDetailsDelegate: class {
 
 class VehicleDetailsViewController: UIViewController {
 
+    // Interface outlets
     @IBOutlet weak var licensePlateLabel: UILabel!
     @IBOutlet weak var driverLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,9 +26,13 @@ class VehicleDetailsViewController: UIViewController {
     @IBOutlet weak var gearboxTypeLabel: UILabel!
     @IBOutlet weak var cleanlinessLabel: UILabel!
     
+    // Var's
     var viewModel: VehicleDetailsViewModel?
     weak var delegate: VehicleDetailsDelegate?
     
+    // Presentation
+    private let defaultAnimation = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.8)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +56,47 @@ class VehicleDetailsViewController: UIViewController {
     
     @IBAction func didPressCloseButton() {
         delegate?.vehicleDetailsdidPressCloseButton(self)
+    }
+    
+    func presentIn(viewController parent: UIViewController) {
+        parent.view.addSubview(view)
+        parent.addChild(self)
+        didMove(toParent: parent)
+        
+        let parentFrame = parent.view.frame
+        
+        let finalPosition: CGPoint = {
+            let minY = parentFrame.size.height - 320
+            let yPosition = min(parentFrame.size.height/2, minY)
+            let finalPosition = CGPoint(x: 0, y: yPosition)
+            return finalPosition
+        }()
+
+        let initialPosition = CGPoint(x: 0, y: parentFrame.size.height)
+        view.frame = CGRect(origin: initialPosition, size: parentFrame.size)
+        view.alpha = 0.7
+        
+        defaultAnimation.addAnimations {
+            self.view.frame = CGRect(origin: finalPosition, size: parentFrame.size)
+            self.view.alpha = 1.0
+        }
+        defaultAnimation.startAnimation()
+    }
+    
+    func dismissDetailsFrom(viewController parent: UIViewController) {
+        self.willMove(toParent: nil)
+        
+        let parentFrame = parent.view.frame
+        let finalFrame = CGPoint(x: 0, y: parentFrame.size.height)
+        defaultAnimation.addAnimations {
+            self.view.frame.origin = finalFrame
+            self.view.alpha = 0.7
+        }
+        defaultAnimation.addCompletion { (_) in
+            self.removeFromParent()
+            self.view.removeFromSuperview()
+        }
+        defaultAnimation.startAnimation()
     }
 }
 

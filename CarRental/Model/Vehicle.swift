@@ -8,19 +8,19 @@
 
 import Foundation
 
-enum FuelType: String, Codable {
+enum FuelType: String, Codable, CaseIterable {
     case petrol = "P"
     case diesel = "D"
     case eletric = "E"
 }
 
-enum Cleanliness: String, Codable {
+enum Cleanliness: String, Codable, CaseIterable {
+    case regular = "REGULAR"
     case clean = "CLEAN"
     case veryClean = "VERY_CLEAN"
-    case regular = "REGULAR"
 }
 
-enum Transmission: String, Codable {
+enum Transmission: String, Codable, CaseIterable {
     case automatic = "A"
     case manual = "M"
 }

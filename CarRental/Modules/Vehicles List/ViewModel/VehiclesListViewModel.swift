@@ -15,9 +15,11 @@ protocol VehicleListViewModelDelegate {
     func presentVehicleDetails(vehicle: Vehicle)
 }
 
-protocol VehicleListViewModelProtocol {
+protocol VehicleListViewModelProtocol: VehicleFilterDelegate {
     var delegate: VehicleListViewModelDelegate? { get set }
     var vehicles: [Vehicle] { get set }
+    var allVehicles: [Vehicle] { get set }
+    var filter: VehicleFilter { get set }
     
     func requestVehicleList()
     func requestDetailsFor(vehicle: Vehicle)
@@ -26,6 +28,8 @@ protocol VehicleListViewModelProtocol {
 class VehiclesListViewModel: VehicleListViewModelProtocol {
     var delegate: VehicleListViewModelDelegate?
     var vehicles: [Vehicle] = []
+    var allVehicles: [Vehicle] = []
+    var filter: VehicleFilter = VehicleFilter()
     
     let service: VehiclesService
     init(service: VehiclesService) {
@@ -35,13 +39,13 @@ class VehiclesListViewModel: VehicleListViewModelProtocol {
     func requestVehicleList() {
         delegate?.isLoading(loading: true)
         service.requestVehiclesList { [weak self] (result) in
-            self?.delegate?.didLoadVehiclesList(result: result)
-            self?.delegate?.isLoading(loading: false)
-            
             switch result {
             case .success(let vehicles):
-                self?.vehicles = vehicles
-            default: break
+                self?.allVehicles = vehicles
+                self?.applyVehicleFilter()
+            
+            case .failure:
+                self?.delegate?.didLoadVehiclesList(result: result)
             }
         }
     }
@@ -53,4 +57,33 @@ class VehiclesListViewModel: VehicleListViewModelProtocol {
         let indexPath = IndexPath(row: index, section: 0)
         delegate?.scrollTo(indexPath: indexPath)
     }
+    
+    func applyVehicleFilter() {
+        var filterVehicles = allVehicles
+            
+        if let fuelLevel = filter.fuelLevel {
+            filterVehicles = filterVehicles.filter { $0.fuelLevel >= fuelLevel }
+        }
+        if filter.fuelType.count > 0 {
+            filterVehicles = filterVehicles.filter { filter.fuelType.contains($0.fuelType) }
+        }
+        if filter.transmission.count > 0 {
+            filterVehicles = filterVehicles.filter { filter.transmission.contains($0.transmission) }
+        }
+        if filter.cleanliness.count > 0 {
+            filterVehicles = filterVehicles.filter { filter.cleanliness.contains($0.innerCleanliness) }
+        }
+        self.vehicles = filterVehicles
+        self.delegate?.didLoadVehiclesList(result: .success(filterVehicles))
+        self.delegate?.isLoading(loading: false)
+    }
+}
+
+extension VehiclesListViewModel {
+    
+    func vehicleFilter(_ vehicleFilter: VehiclesFilterViewController, didApplyFilter filter: VehicleFilter) {
+        self.filter = filter
+        applyVehicleFilter()
+    }
+    
 }

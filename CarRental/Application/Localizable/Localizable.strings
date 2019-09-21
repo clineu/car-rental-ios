@@ -18,3 +18,5 @@
 "service_error.invalid_url" = "Invalid request. Try again later";
 "service_error.decode_error" = "Invalid server response. Try again later";
 "service_error.api_error" = "Invalid server response. Try again later";
+
+"vehicle_list.result.empty_list" = "There's no vehicles available";
