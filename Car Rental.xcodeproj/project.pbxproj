@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4003CF7DC736E672D3691A2E /* Pods_Car_Rental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC6949AE90CB50A9DA32688 /* Pods_Car_Rental.framework */; };
-		46B8A719E6B8E5128B67F79E /* Pods_Car_RentalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E1AEFDC09D15A5E2C271D9 /* Pods_Car_RentalUITests.framework */; };
 		89BA9CA431656B743EC90727 /* Pods_Car_RentalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C50A6B492C99C192A8912D9 /* Pods_Car_RentalTests.framework */; };
 		AD1BA0AE2334757300948354 /* VehiclesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1BA0AD2334757300948354 /* VehiclesListViewModel.swift */; };
 		AD1BA0B1233476AE00948354 /* VehicleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1BA0AF233476AE00948354 /* VehicleDetailsViewController.swift */; };
@@ -20,7 +19,6 @@
 		AD213C2123315AA200626D30 /* VehiclesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C1F23315AA200626D30 /* VehiclesList.storyboard */; };
 		AD213C2623315AA400626D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2523315AA400626D30 /* Assets.xcassets */; };
 		AD213C2923315AA400626D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD213C2723315AA400626D30 /* LaunchScreen.storyboard */; };
-		AD213C3F23315AA400626D30 /* CarRentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD213C3E23315AA400626D30 /* CarRentalUITests.swift */; };
 		AD50A8AE233689760028C234 /* VehicleFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD50A8AD233689760028C234 /* VehicleFilter.storyboard */; };
 		AD50A8B023368A7C0028C234 /* VehiclesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8AF23368A7C0028C234 /* VehiclesFilterViewController.swift */; };
 		AD50A8B22336A4470028C234 /* FuelType+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50A8B12336A4470028C234 /* FuelType+Localizable.swift */; };
@@ -55,13 +53,6 @@
 			remoteGlobalIDString = AD213C1723315AA200626D30;
 			remoteInfo = "Car Rental";
 		};
-		AD213C3B23315AA400626D30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD213C1023315AA200626D30 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD213C1723315AA200626D30;
-			remoteInfo = "Car Rental";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +75,6 @@
 		AD213C2A23315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD213C2F23315AA400626D30 /* Car RentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD213C3523315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD213C3A23315AA400626D30 /* Car RentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car RentalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD213C3E23315AA400626D30 /* CarRentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalUITests.swift; sourceTree = "<group>"; };
 		AD213C4023315AA400626D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD50A8AD233689760028C234 /* VehicleFilter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehicleFilter.storyboard; sourceTree = "<group>"; };
@@ -131,14 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89BA9CA431656B743EC90727 /* Pods_Car_RentalTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD213C3723315AA400626D30 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46B8A719E6B8E5128B67F79E /* Pods_Car_RentalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +175,6 @@
 			children = (
 				AD213C1823315AA200626D30 /* Car Rental.app */,
 				AD213C2F23315AA400626D30 /* Car RentalTests.xctest */,
-				AD213C3A23315AA400626D30 /* Car RentalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -474,25 +455,6 @@
 			productReference = AD213C2F23315AA400626D30 /* Car RentalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AD213C3923315AA400626D30 /* Car RentalUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD213C4923315AA400626D30 /* Build configuration list for PBXNativeTarget "Car RentalUITests" */;
-			buildPhases = (
-				EEBF40DAA9B23F5A5944C980 /* [CP] Check Pods Manifest.lock */,
-				AD213C3623315AA400626D30 /* Sources */,
-				AD213C3723315AA400626D30 /* Frameworks */,
-				AD213C3823315AA400626D30 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AD213C3C23315AA400626D30 /* PBXTargetDependency */,
-			);
-			name = "Car RentalUITests";
-			productName = "Car RentalUITests";
-			productReference = AD213C3A23315AA400626D30 /* Car RentalUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -507,10 +469,6 @@
 						CreatedOnToolsVersion = 10.3;
 					};
 					AD213C2E23315AA400626D30 = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = AD213C1723315AA200626D30;
-					};
-					AD213C3923315AA400626D30 = {
 						CreatedOnToolsVersion = 10.3;
 						TestTargetID = AD213C1723315AA200626D30;
 					};
@@ -531,7 +489,6 @@
 			targets = (
 				AD213C1723315AA200626D30 /* Car Rental */,
 				AD213C2E23315AA400626D30 /* Car RentalTests */,
-				AD213C3923315AA400626D30 /* Car RentalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -552,13 +509,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AD213C2D23315AA400626D30 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD213C3823315AA400626D30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -629,28 +579,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEBF40DAA9B23F5A5944C980 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Car RentalUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -695,14 +623,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD213C3623315AA400626D30 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD213C3F23315AA400626D30 /* CarRentalUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -710,11 +630,6 @@
 			isa = PBXTargetDependency;
 			target = AD213C1723315AA200626D30 /* Car Rental */;
 			targetProxy = AD213C3023315AA400626D30 /* PBXContainerItemProxy */;
-		};
-		AD213C3C23315AA400626D30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD213C1723315AA200626D30 /* Car Rental */;
-			targetProxy = AD213C3B23315AA400626D30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -936,48 +851,6 @@
 			};
 			name = Release;
 		};
-		AD213C4A23315AA400626D30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E01BBEE133D7365262198DA /* Pods-Car RentalUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9J9A6836S2;
-				INFOPLIST_FILE = CarRentalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clineu.Car-RentalUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Car Rental";
-			};
-			name = Debug;
-		};
-		AD213C4B23315AA400626D30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D48A74F021E97CF22F2F8ADF /* Pods-Car RentalUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9J9A6836S2;
-				INFOPLIST_FILE = CarRentalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clineu.Car-RentalUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Car Rental";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1004,15 +877,6 @@
 			buildConfigurations = (
 				AD213C4723315AA400626D30 /* Debug */,
 				AD213C4823315AA400626D30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AD213C4923315AA400626D30 /* Build configuration list for PBXNativeTarget "Car RentalUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD213C4A23315AA400626D30 /* Debug */,
-				AD213C4B23315AA400626D30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
