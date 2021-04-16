@@ -1,0 +1,10 @@
+{
+	"apiKey":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"checkPolicies":false,
+	"productName":"Car rental",
+	"productVer":"1.0.0",
+
+	"projectName":"Car rental",
+	"projectVer":"1.0.0",
+	"devDep": false
+}
