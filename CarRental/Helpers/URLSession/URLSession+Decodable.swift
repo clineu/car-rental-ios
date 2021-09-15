@@ -45,7 +45,7 @@ extension URLSession {
     
     private func decodeObject<T: Decodable>(data: Data) throws -> T {
         let decoder = JSONDecoder()
-        let vehicles = try decoder.decode(T.self, from: data)
-        return vehicles
+        let decoded = try decoder.decode(T.self, from: data)
+        return decoded
     }
 }
